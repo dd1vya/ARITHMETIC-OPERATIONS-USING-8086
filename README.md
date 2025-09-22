@@ -30,6 +30,7 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 ## FLOW CHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/b5a7062d-e294-47cd-9683-a40de25e82de" />
 
+## DIRECT ADDITION :
 
 #### Program
 
@@ -57,22 +58,67 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+|     1200                |      12                  |
+|     1201                |      34                  |
+|     1202                |      12                  |
+|     1203                |      34                  |
+|     1204                |      24                  |
+|     1205                |      68                  |
+#### Manual Calculations :
+
+![WhatsApp Image 2025-09-22 at 11 11 59_8fb6d2dd](https://github.com/user-attachments/assets/c690d087-cd55-4677-a753-e177704147a6)
+
+
+
+
+## OUTPUT IMAGE FROM MASM SOFTWARE :
+
+<img width="640" height="480" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/7be1c82a-4059-4f6e-832a-dc7d82a4aba6" />
+
+
+### INDIRECT ADDITION :
+
+### PROGRAM : 
+```
+CODE SEGMENT 
+ASSUME CS: CODE, DS:CODE 
+ORG 1000H 
+MOV SI,2000H 
+MOV CL,00H 
+MOV AX,[SI] 
+MOV BX,[SI+02H] 
+ADD AX,BX 
+JNC L1 
+INC CL 
+L1:  MOV [SI+04H],AX 
+MOV [SI+06H],CL 
+MOV AH,4CH 
+INT 21H 
+CODE ENDS 
+END
+
+```
+### OUTPUT TABLE :
+
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
+|     1200                |      24                  |
+|     1201                |      12                  |
+|     1202                |      24                  |
+|     1203                |      12                  |
+|     1204                |      48                  |
+|     1205                |      24                  |
+
+### MANUAL CALCULATIONS :
+![WhatsApp Image 2025-09-22 at 11 19 53_a1c790d4](https://github.com/user-attachments/assets/4033ef3b-7f65-4b4c-ae09-002bee0ba746)
+
+
+
+### OUTPUT IMAGE FROM MASM SOFTWARE :
+<img width="640" height="480" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/0340d165-ea53-44cc-a738-1dc8e77bf2b1" />
+
 
 #### Manual Calculations
-
-(Add your calculation here)
-
----
-
-## OUTPUT IMAGE FROM MASM SOFTWARE
-
-<img width="640" height="480" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/a9c52214-5a96-46c6-9de5-d076f83686a8" />
-
-
-<img width="640" height="480" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/117d948f-29ac-4d47-b70f-60afd2cb6727" />
-
-
 ## 2. SUBTRACTION
 
 #### Algorithm
@@ -114,20 +160,58 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+|     1200                |      12                  |
+|     1201                |      34                  |
+|     1202                |      12                  |
+|     1203                |      34                  |
+|     1204                |      00                  |
+|     1205                |      00                  |
 
 #### Manual Calculations
 
-(Add your calculation here)
-
----
+![WhatsApp Image 2025-09-22 at 11 23 00_136dc50c](https://github.com/user-attachments/assets/2ab4505e-0926-4f05-9934-7669d9b31c77)
 
 
-## OUTPUT SCREEN FROM MASM SOFTWARE
 
-<img width="640" height="480" alt="Screenshot (70)" src="https://github.com/user-attachments/assets/b9d30264-aa10-4014-a9c5-a78a434dc21f" />
+## OUTPUT SCREEN FROM MASM SOFTWARE :
+![WhatsApp Image 2025-09-17 at 14 23 49_462c876e](https://github.com/user-attachments/assets/646153ff-3720-4e88-9f46-63875eb8170a)
 
-<img width="640" height="480" alt="Screenshot (69)" src="https://github.com/user-attachments/assets/bf9e4cfc-b96a-4c79-89bc-8efb0c87d611" />
+### INDIRECT SUBTRACTION :
+
+###PROGRAM :
+```CODE SEGMENT 
+ASSUME CS: CODE,DS:CODE 
+ORG 1000H 
+MOV SI,2000H 
+MOV CL,00H 
+MOV AX,[SI] 
+MOV BX,[SI+02H] 
+SUB AX, BX 
+JNC DOWN 
+INC CL 
+DOWN: MOV [SI+04H],AX 
+MOV [SI+06H],CL 
+MOV AH,4CH 
+INT 21H 
+CODE ENDS 
+END
+```
+### OUTPUT TABLE:
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
+|     1200                |      12                  |
+|     1201                |      34                  |
+|     1202                |      12                  |
+|     1203                |      34                  |
+|     1204                |      00                  |
+|     1205                |      00                  |
+
+### MANUAL CALCULATION :
+![WhatsApp Image 2025-09-22 at 11 25 06_e69403b4](https://github.com/user-attachments/assets/49368211-0573-424d-9c47-15ed4819321b)
+
+
+### OUTPUT SCREEN FROM MASM SOFTWARE :
+![WhatsApp Image 2025-09-22 at 09 00 30_1160c9f9](https://github.com/user-attachments/assets/107cad3e-9cd3-4f05-8fb8-f48cfbac7b57)
 
 
 
@@ -168,21 +252,60 @@ END
 #### Output Table
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
-| ----------------------- | ------------------------ |
-|                         |                          |
+| ----------------------- | -------------------------|
+|     1200                |      12                  |
+|     1201                |      34                  |
+|     1202                |      12                  |
+|     1203                |      34                  |
+|     1204                |      09                  |
+|     1205                |      5A                  |
+#### Manual Calculations :
 
-#### Manual Calculations
+![WhatsApp Image 2025-09-22 at 11 29 02_6f91c896](https://github.com/user-attachments/assets/6e915b58-dc09-4205-9f52-e4579275674e)
 
-(Add your calculation here)
 
----
 
-## OUTPUT SCREEN FROM MASM SOFTWARE
+## OUTPUT SCREEN FROM MASM SOFTWARE :
+---![WhatsApp Image 2025-09-22 at 09 52 15_3d1590cd](https://github.com/user-attachments/assets/5aed5e86-8275-403f-9e06-f3fa41d547ba)
 
-<img width="640" height="480" alt="Screenshot (72)" src="https://github.com/user-attachments/assets/2fdf7b5d-680e-4e0e-acf8-68b7f11648f6" />
 
-<img width="640" height="480" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/975e8907-b088-4623-ab2b-6c404db082fe" />
+### INDIRECT MULTIPLICATION :
 
+### PROGRAM:
+```CODE SEGMENT 
+ASSUME CS: CODE,DS:CODE  
+ORG 1000H 
+MOV SI,2000H  
+MOV DX,0000H 
+ MOV AX,[SI] 
+MOV BX,[SI+02H]  
+MUL BX 
+MOV [SI+04H],AX  
+MOV [SI+06H],DX  
+MOV AH,4CH 
+INT 21H 
+ CODE ENDS 
+END
+```
+
+### OUTPUT TABLE :
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | -------------------------|
+|     2000                |      12                  |
+|     2001                |      34                  |
+|     2002                |      12                  |
+|     2003                |      34                  |
+|     2004                |      44                  |
+|     2005                |      51                  |
+|     2006                |      97                  |
+|     2007                |      0A                  |
+
+#### Manual Calculations :
+![WhatsApp Image 2025-09-22 at 11 31 46_c6eb8dcc](https://github.com/user-attachments/assets/e1b153ba-15e9-4690-97b5-a7a4492843e7)
+
+
+### OUTPUT SCREEN FROM MASM SOFTWARE :
+![WhatsApp Image 2025-09-22 at 09 11 38_3351edd6](https://github.com/user-attachments/assets/b7a61cc0-0988-4bcf-818d-fed1c849ef49)
 
 
 ## 4. DIVISION
@@ -220,18 +343,55 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+|     2000                |      34                  |
+|     2001|               |      12                  |
+|     2002                |      34                  |
+|     2003                |      12                  |
+|     2004                |      01                  |
+|     2005                |      00                  |
 
-#### Manual Calculations
+#### Manual Calculations :
 
-(Add your calculation here)
+![WhatsApp Image 2025-09-22 at 11 34 42_4094ca60](https://github.com/user-attachments/assets/45a6fad4-cc08-4805-a913-2bf3d50021f2)
 
----
-## OUTPUT FROM MASM SOFTWARE
+## OUTPUT FROM MASM SOFTWARE :
+![WhatsApp Image 2025-09-22 at 08 39 16_ac0336af](https://github.com/user-attachments/assets/44db926f-c50f-437d-b47d-d89fe445a644)
 
-<img width="640" height="480" alt="Screenshot (73)" src="https://github.com/user-attachments/assets/4e0bad18-6ac3-4419-93e1-d2d8f1c4a97d" />
+### INDIRECT DIVISION :
 
-<img width="640" height="480" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/78652db0-8f6a-4ca1-ae85-05aad947f78f" />
+### PROGRAM :
+```
+CODE SEGMENT 
+ASSUME CS: CODE,DS:CODE 
+ORG 1000H 
+MOV SI,2000H 
+MOV DX,0000H 
+MOV AX,[SI] 
+MOV BX,[SI+02H] 
+DIV BX 
+MOV [SI+04H],AX 
+MOV [SI+06H],DX 
+MOV AH,4CH 
+INT 21H 
+CODE ENDS 
+END
+```
+### OUTPUT TABLE :
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
+|     2000                |      34                  |
+|     2001|               |      12                  |
+|     2002                |      34                  |
+|     2003                |      12                  |
+|     2004                |      01                  |
+|     2005                |      00                  |
+
+### MANUAL CALCULATIONS :
+![WhatsApp Image 2025-09-22 at 11 36 53_c877ce96](https://github.com/user-attachments/assets/dd076954-cb1d-4905-a7b4-c973c18bb20b)
+
+
+### OUTPUT FROM MASM SOFTWARE :
+![WhatsApp Image 2025-09-22 at 09 27 18_30ecfa80](https://github.com/user-attachments/assets/85d47e9f-81ec-433f-a319-1c24cf95ebb9)
 
 
 
