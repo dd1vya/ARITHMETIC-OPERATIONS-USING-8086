@@ -8,7 +8,7 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 * Personal Computer with MASM Software
   
 ## 1. ADDITION
-#### Algorithm
+### Algorithm
 1. Initialize memory location in HL register.
 2. Store 1st data.
 3. Increment HL to enter 2nd data.
@@ -18,11 +18,11 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 7. Store result.
 8. Stop.
 
-## FLOW CHART
+### FLOW CHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/b5a7062d-e294-47cd-9683-a40de25e82de" />
 
 ## DIRECT ADDITION :
-#### Program
+### Program
 ```asm
 CODE SEGMENT
 ASSUME CS: CODE, DS: CODE
@@ -43,7 +43,7 @@ CODE ENDS
 END
 ```
 
-#### Output Table
+### Output Table
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
 |     1200                |      12                  |
@@ -53,17 +53,13 @@ END
 |     1204                |      24                  |
 |     1205                |      68                  |
 
-#### Manual Calculations :
+### Manual Calculations :
 ![WhatsApp Image 2025-09-22 at 11 11 59_8fb6d2dd](https://github.com/user-attachments/assets/c690d087-cd55-4677-a753-e177704147a6)
 
-
-
-
-## OUTPUT IMAGE FROM MASM SOFTWARE :
+### OUTPUT IMAGE FROM MASM SOFTWARE :
 <img width="640" height="480" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/7be1c82a-4059-4f6e-832a-dc7d82a4aba6" />
 
-
-### INDIRECT ADDITION :
+## INDIRECT ADDITION :
 ### PROGRAM : 
 ```
 CODE SEGMENT 
@@ -100,7 +96,6 @@ END
 ### OUTPUT IMAGE FROM MASM SOFTWARE :
 <img width="640" height="480" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/0340d165-ea53-44cc-a738-1dc8e77bf2b1" />
 
-
 ## 2. SUBTRACTION
 #### Algorithm
 1. Initialize memory and store 1st data.
@@ -109,9 +104,8 @@ END
 4. Subtract memory content.
 5. Store result.
 
-## FLOWCHART
+### FLOWCHART
 <img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/564c3c7a-33ce-4a1c-8920-beb5c24b9b47" />
-
 
 #### Program
 ```asm
@@ -133,8 +127,6 @@ INT 21H
 CODE ENDS
 END
 ```
-
-
 #### Output Table
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
@@ -148,12 +140,10 @@ END
 #### Manual Calculations
 ![WhatsApp Image 2025-09-22 at 11 23 00_136dc50c](https://github.com/user-attachments/assets/2ab4505e-0926-4f05-9934-7669d9b31c77)
 
-
-
-## OUTPUT SCREEN FROM MASM SOFTWARE :
+### OUTPUT SCREEN FROM MASM SOFTWARE :
 ![WhatsApp Image 2025-09-17 at 14 23 49_462c876e](https://github.com/user-attachments/assets/646153ff-3720-4e88-9f46-63875eb8170a)
 
-### INDIRECT SUBTRACTION :
+## INDIRECT SUBTRACTION :
 ###PROGRAM :
 ```CODE SEGMENT 
 ASSUME CS: CODE,DS:CODE 
@@ -185,11 +175,8 @@ END
 ### MANUAL CALCULATION :
 ![WhatsApp Image 2025-09-22 at 11 25 06_e69403b4](https://github.com/user-attachments/assets/49368211-0573-424d-9c47-15ed4819321b)
 
-
 ### OUTPUT SCREEN FROM MASM SOFTWARE :
 ![WhatsApp Image 2025-09-22 at 09 00 30_1160c9f9](https://github.com/user-attachments/assets/107cad3e-9cd3-4f05-8fb8-f48cfbac7b57)
-
-
 
 ## 3. MULTIPLICATION
 #### Algorithm
@@ -198,10 +185,8 @@ END
 3. Multiply.
 4. Store result.
 
-##FLOWCHART
+### FLOWCHART
 <img width="569" height="906" alt="image" src="https://github.com/user-attachments/assets/88be88ff-2896-4a88-b73d-84ccffd2fcf9" />
-
-
 
 #### Program
 ```asm
@@ -234,11 +219,10 @@ END
 #### Manual Calculations :
 ![WhatsApp Image 2025-09-22 at 11 29 02_6f91c896](https://github.com/user-attachments/assets/6e915b58-dc09-4205-9f52-e4579275674e)
 
-## OUTPUT SCREEN FROM MASM SOFTWARE :
+#### OUTPUT SCREEN FROM MASM SOFTWARE :
 ---![WhatsApp Image 2025-09-22 at 09 52 15_3d1590cd](https://github.com/user-attachments/assets/5aed5e86-8275-403f-9e06-f3fa41d547ba)
 
-
-### INDIRECT MULTIPLICATION :
+## INDIRECT MULTIPLICATION :
 ### PROGRAM:
 ```CODE SEGMENT 
 ASSUME CS: CODE,DS:CODE  
@@ -255,7 +239,6 @@ INT 21H
  CODE ENDS 
 END
 ```
-
 ### OUTPUT TABLE :
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | -------------------------|
@@ -271,10 +254,8 @@ END
 #### Manual Calculations :
 ![WhatsApp Image 2025-09-22 at 11 31 46_c6eb8dcc](https://github.com/user-attachments/assets/e1b153ba-15e9-4690-97b5-a7a4492843e7)
 
-
 ### OUTPUT SCREEN FROM MASM SOFTWARE :
 ![WhatsApp Image 2025-09-22 at 09 11 38_3351edd6](https://github.com/user-attachments/assets/b7a61cc0-0988-4bcf-818d-fed1c849ef49)
-
 
 ## 4. DIVISION
 #### Algorithm
@@ -282,9 +263,8 @@ END
 2. Perform division.
 3. Store result.
 
-   ## FLOWCHART
+### FLOWCHART
 <img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
-
 
 #### Program
 ```asm
@@ -320,7 +300,7 @@ END
 ## OUTPUT FROM MASM SOFTWARE :
 ![WhatsApp Image 2025-09-22 at 08 39 16_ac0336af](https://github.com/user-attachments/assets/44db926f-c50f-437d-b47d-d89fe445a644)
 
-### INDIRECT DIVISION :
+## INDIRECT DIVISION :
 ### PROGRAM :
 ```
 CODE SEGMENT 
@@ -351,7 +331,6 @@ END
 
 ### MANUAL CALCULATIONS :
 ![WhatsApp Image 2025-09-22 at 11 36 53_c877ce96](https://github.com/user-attachments/assets/dd076954-cb1d-4905-a7b4-c973c18bb20b)
-
 
 ### OUTPUT FROM MASM SOFTWARE :
 ![WhatsApp Image 2025-09-22 at 09 27 18_30ecfa80](https://github.com/user-attachments/assets/85d47e9f-81ec-433f-a319-1c24cf95ebb9)
